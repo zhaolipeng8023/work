@@ -1,0 +1,16 @@
+# 添加会员
+打开浏览器,Firefox
+获取页面,http://172.16.13.120:8080/WoniuSales1.4/
+输入,id=username,admin
+输入,id=password,admin
+输入,id=verifycode,0000
+点击,xpath=/html/body/div[4]/div/form/div[6]/button
+休眠,2
+点击,link_text=会员管理
+输入,id=customerphone,18676768787
+点击,xpath=/html/body/div[4]/div[1]/form[2]/div[2]/button[1]
+休眠,2
+关闭浏览器
+# 查询会员
+
+# 编辑会员
