@@ -1,0 +1,18 @@
+# 销售出库
+打开浏览器,Firefox
+获取页面,http://172.16.13.120:8080/WoniuSales1.4/
+输入,id=username,admin
+输入,id=password,admin
+输入,id=verifycode,0000
+点击,xpath=/html/body/div[4]/div/form/div[6]/button
+休眠,2
+将查询结果写入文件,db_info,select count(*) FROM sellsum
+输入,id=barcode,11111111
+点击,xpath=/html/body/div[4]/div[1]/div/div[1]/form/button
+输入,id=customerphone,18676768787
+点击,css=#vipsell > div:nth-child(1) > form:nth-child(1) > div:nth-child(2) > button:nth-child(3)
+点击,id=submit
+休眠,2
+enter确定
+断言两次查询结果,db_info,select count(*) FROM sellsum
+关闭浏览器
